@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if rows == None %}
+<h1 class = "filmheader">{{ header }}</h1>
+
+{% else %}
+<h1 class = "filmheader">{{ header }}</h1>
+    <div class="film_grid_container">
+        {% for row in rows %}
+        <div class="filmBox">
+            <h1>{{ row.title }}</h1>
+            <p>Directed by: {{ row.director }} in {{ row.year }}</p>
+            <p>Genre: {{ row.genre }}</p>
+            <p>Run Time (mins): {{ row.run_time }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+{% endif %}    
+
+
+{% endblock content %}

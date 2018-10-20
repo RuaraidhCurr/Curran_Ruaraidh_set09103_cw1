@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class = "reg_text">Enter new user details <br>
+    below:</h2>
+<div class = "usr_pass"><br>
+<form method="POST" action="{{ url_for('registeruser') }}">
+    Username:<br> <input type="text" name="username" required/><br>
+    Password:<br> <input type="password" name="password" required/><br>
+    Re-type Password:<br> <input type="password" name="varpass" required/><br>
+    <input type="submit" value="Submit">
+</form>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+{% endblock content %}

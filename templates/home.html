@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="home_grid_container">
+    <div class="welcome">
+        {% if username %}
+        <h1>Welcome back {{ username }}</h1>
+        {% endif %}
+    </div>
+    <div class="about_me">
+        <h3>About me</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, aperiam? Quia incidunt officiis ea perspiciatis consectetur. Quas, nostrum obcaecati. Quia.</p>
+    </div>
+    <div class="about_this_app">
+        <h3>About This Website</h3>
+        <p>A simple website that allows a user to register a user to a database, log-in and log-out of that user, allows the user to view the films on the database and catagories them aswell as adding their own films to the list!</p>
+    </div>
+    <div class="box">
+        <h3>Unknown</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, architecto.</p>
+    </div>
+</div>    
+{% endblock content %}

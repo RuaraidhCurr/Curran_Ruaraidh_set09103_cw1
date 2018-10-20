@@ -4,13 +4,48 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
     <script type="text/javascript"; src="{{ url_for('static', filename='java.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" 
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='jquery-3-3-1.js') }}"></script>
 
     <title>Web Directory</title>
 </head>
 <body>
-    {% block content %}{% endblock %}    
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}"><p>Home</p></a></li> ··
+            <li><a href="{{ url_for('query') }}"><p>Search film</p></a></li> ·
+            <li><a href="{{ url_for('addfilm') }}"><p>Add film</p></a></li> ·
+            <li><a href="{{ url_for('filmlist') }}"><p>See all films</p></a></li> ·
+            <li><a href="{{ url_for('logout') }}"><p>Logout</p></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <br>
+            <div class="flash_messages">
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+			<div class="footer-right">
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="{{ url_for('home') }}">Home</a>
+					·
+					<a href="#">Back to Top</a>
+				</p>
+
+				<p>Copyright: Ruaraidh Curran &copy; 2018</p>
+			</div>
+		</footer>
 </body>
 </html>

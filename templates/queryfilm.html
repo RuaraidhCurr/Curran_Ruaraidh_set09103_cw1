@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<div class = "usr_pass"><br>
+<form method="POST" action="{{ url_for('queryresult') }}">
+    Title:<br> <input type="text" name="title"/><br>
+    Year:<br> <input type="number" name="year"/><br>
+    Genre:<br> <input type="text" name="genre"/><br>
+    Director:<br> <input type="text" name="director"/><br>
+    Movie atleast this long (mins):<br> <input type="number" name="min_run_time"/><br>
+    Max Movie Length (mins):<br> <input type="number" name="max_run_time"/><br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}

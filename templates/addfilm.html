@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<div class = "usr_pass"><br>
+<form method="POST" action="{{ url_for('addfilmresult') }}">
+    Title:<br> <input type="text" name="title" required/><br>
+    Genre:<br> <input type="text" name="genre" required/><br>
+    Director:<br> <input type="text" name="director" required/><br>
+    Year:<br> <input type="text" name="year" required/><br>
+    Run Time (mins):<br> <input type="text" name="run_time" required/><br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}
